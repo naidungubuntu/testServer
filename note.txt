@@ -1,0 +1,25 @@
+# how to deploy a fastapi server:
+    + push project to git (or other way make vps receive project)
+    + clone project to vps
+    + cd /apps    # this cmd let you cd project folder
+    + if new vps (have not install eviroment) run these commands:
+        sudo apt update
+        sudo apt upgrade -y
+        sudo reboot
+        ....wating restart vps
+        sudo apt-get install -y -q build-essential git unzip zip nload tree
+        sudo apt-get install -y -q python3-pip python3-dev python3-venv
+        sudo apt install software-properties-common -y
+        sudo add-apt-repository ppa:deadsnakes/ppa -y
+        sudo apt install python3.10
+        pip3 install --upgrade pip setuptools wheel
+        pip3 install --upgrade httpie glances
+        pip3 install --upgrade gunicorn uvloop httptools
+    + continue:
+        pip3 install -r requirements.txt    # install if project has new libs
+        python3.10 -m venv .   # create venv (version python upon you)
+        source /apps/bin/activate   #activate venv
+    + run project:
+        uvicorn {app_name}:{fastapi_name} --host 0.0.0.0 --port 8000
+            * 0.0.0.0: set for public ip
+            * 8000: custom, set what you like
