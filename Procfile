@@ -1,1 +1,1 @@
-web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker main_apis:app
+web: uvicorn main_apis:app --host=0.0.0.0 --port=naidung
