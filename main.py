@@ -1,9 +1,6 @@
+import imp
 from fastapi import FastAPI
-from deta import Deta
-from numpy import source
-from log_apis.apis import logs_api_action
-from pos_verified_imeis.apis import posImei_api_action
-import tablesObj as dbs
+import numpy as np
 import json
 
 app = FastAPI()
