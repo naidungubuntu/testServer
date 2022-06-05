@@ -3,7 +3,7 @@ import json
 
 app = FastAPI()
 
-@app.get('/')
+@app.get('/home')
 def home():
     return {'msg': 'hello word'}
 
