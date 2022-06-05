@@ -1,8 +1,6 @@
 from fastapi import FastAPI
 import json
 import sqlite3
-from numpy import source
-from tools import query_data
 
 app = FastAPI()
 
