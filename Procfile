@@ -1,1 +1,0 @@
-web: uvicorn main_apis:app --host=0.0.0.0 --port=naidung
